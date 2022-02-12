@@ -15,7 +15,7 @@ import eu.triler.WorldSelect.commands.worlds;
 
 public class WorldSelect extends JavaPlugin {
 
-	public static Inventory worldSelector = Bukkit.createInventory(null, 54, "World select");;
+	public static Inventory worldSelector = Bukkit.createInventory(null, 54, "§e§lWorld select");;
 
 	@Override
 	public void onEnable() {
@@ -31,11 +31,12 @@ public class WorldSelect extends JavaPlugin {
 		    	worldSelector.clear();
 		    	int i = 0;
 		        for(World world : Bukkit.getWorlds()) {
-		        	ItemStack item = new ItemStack(Material.PAPER);
+		        	ItemStack item = new ItemStack(Material.BOOK);
 		        	ItemMeta meta = item.getItemMeta();
 		        	meta.setDisplayName(world.getName());
 		        	List<String> lore = new ArrayList<>();
-		        	lore.add("§fRight click to teleport.");
+		        	lore.add("§eRight click to teleport.");
+		        	lore.add("§eLeft to unload the world.");
 		        	meta.setLore(lore);
 		        	item.setItemMeta(meta);
 		        	worldSelector.setItem(i, item);
