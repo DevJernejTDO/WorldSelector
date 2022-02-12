@@ -1,0 +1,9 @@
+main: eu.triler.WorldSelect.WorldSelect
+name: WorldSelect
+version: 1.0
+api-version: 1.18
+author: JernejTDO
+
+commands:
+   worlds:
+      usage: /<command>
